@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Frontend Resume</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <!-- Dot Navigation -->
+    <div class="dot-nav position-fixed top-50 end-0 translate-middle-y me-3">
+      <a href="#welcome" class="active"></a>
+      <a href="#about"></a>
+      <a href="#hobbies"></a>
+      <a href="#skills"></a>
+      <a href="#projects"></a>
+      <a href="#contact"></a>
+    </div>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Welcome Animation -->
+    <section
+      id="welcome"
+      class="d-flex flex-column justify-content-center align-items-center"
+    >
+      <h1 id="welcome-text"></h1>
+      <p class="welcome-subtitle">Frontend Developer | React | UI Enthusiast</p>
+    </section>
+
+    <!-- About Me (Dual Language) -->
+    <section id="about" class="about-section position-relative text-light py-5">
+      <!-- color circle -->
+      <div class="about-blob"></div>
+
+      <div class="container position-relative">
+        <div class="row align-items-center g-4">
+          <!-- about avatar -->
+          <div class="col-12 d-flex justify-content-center">
+            <div class="about-avatar">
+              <span>FD</span>
+            </div>
+          </div>
+
+          <!-- persian -->
+          <div class="col-md-6 text-end fade-in fa-about" dir="rtl">
+            <h2 class="about-title fa-title">درباره من</h2>
+            <p class="about-intro fa-text">
+              من <span class="name-highlight">فاطمه داغلانی</span> هستم؛
+              توسعه‌دهنده‌ی فرانت‌اند با تمرکز بر خلق تجربه‌های وب
+              <strong>مدرن، پویا و کاملاً ریسپانسیو</strong>. به یادگیری مداوم
+              علاقه‌مندم و با بهره‌گیری از طراحی‌های خلاقانه، رابط‌های کاربری
+              <strong>تمیز، تعاملی و کاربرمحور</strong> می‌سازم.
+            </p>
+
+            <ul class="list-unstyled about-list fa-text mt-3 pe-0">
+              <li>💻 فعالیت تخصصی در حوزه‌ی فرانت‌اند</li>
+              <li>📚 یادگیری مستمر؛ به‌خصوص تکنولوژی‌های حوزه‌ی فرانت‌اند</li>
+            </ul>
+          </div>
+
+          <!-- English -->
+          <div class="col-md-6 text-start fade-in">
+            <h2 class="about-title en-title title">About Me</h2>
+            <p class="about-intro en-text">
+              I’m <span class="name-highlight">Fateme Daghlani</span>, a
+              <strong>Frontend Developer</strong> passionate about crafting
+              <strong>modern, fully responsive</strong> web applications. I
+              focus on delivering clean, user-friendly interfaces with attention
+              to detail, seamless interactions, and a mindset of continuous
+              growth.
+            </p>
+
+            <ul class="list-unstyled about-list en-text mt-3 en-list">
+              <li>💻 Specialized in Frontend development</li>
+              <li>📚 Continuous learner (especially in Frontend stack)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- hobbies section ------------------------------------>
+    <section id="hobbies">
+      <h2 class="hobbies-title title fs-1">Hobbies</h2>
+      <div class="hobbies">
+        <div class="slider">
+          <div class="slide active">
+            <img src="./imgs/cat.jpeg" alt="cat" />
+            <p class="text fs-4 hobbie-text">I'm a Cat Person :)</p>
+          </div>
+          <div class="slide">
+            <img src="./imgs/art.jpeg" alt="art" />
+            <p class="text fs-4 hobbie-text">A skilled painter</p>
+          </div>
+          <div class="slide">
+            <img src="./imgs/sport.jpeg" alt="sport" />
+            <p class="text fs-4 hobbie-text">And an athlete.</p>
+          </div>
+
+          <div class="slide">
+            <img src="./imgs/central.jpg" alt="tec" />
+            <p class="text fs-4 hobbie-text">And of course, a tech enthusiast.</p>
+          </div>
+        </div>
+        <div class="controls">
+          <span class="prev">❮</span>
+          <span class="next">❯</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <!-- Skills Section -->
+    <section
+      id="skills"
+      class="skills-section py-1 position-relative text-light"
+    >
+      <div class="skills-blob"></div>
+
+      <div class="container">
+        <div class="row align-items-start g-4 h-100">
+          <!-- persian -->
+          <div class="col-md-6 col-lg-6 text-end fade-in d-lg-block d-sm-none" dir="rtl">
+            <h2 class="skills-title fa-skill-title">مهارت‌ها</h2>
+            <div class="fa-skill">
+              <p>💻 مسلط به <span>CSS, HTML</span></p>
+            </div>
+            <div class="fa-skill pt-3">
+              <p>⚡ تجربه کار با <span>React, JavaScript</span></p>
+            </div>
+            <div class="fa-skill pt-1">
+              <p>📐 اجرای صفحات کاملاً ریسپانسیو با <span></span>Flexbox, Grid</span></p>
+            </div>
+            <div class="fa-skill pt-1">
+              <p>🔗 کار با <span>GIT</span></p>
+            </div>
+            <div class="fa-skill pt-3">
+              <p>🎨 شکیل‌سازی سکشن‌ها با <span>Bootstrap</span></p>
+            </div>
+            <div class="fa-skill pt-3">
+              <p>🛠️ کار با <span>SASS</span></p>
+            </div>
+            <div class="fa-skill pb-1">
+              <p>⚡ اجرای پروژه با <span>React</span> در صورت نیاز</p>
+            </div>
+            <div class="fa-skill">
+              <p>🎨 آشنا با ابزار <span>Figma</span></p>
+            </div>
+          </div>
+
+          <!-- english -->
+          <div class="col-md-8 col-lg-4 text-start fade-in">
+            <h2 class="skills-title title">Skills</h2>
+            <div class="skill">
+              <p>💻 Proficient in CSS and HTML</p>
+              <div class="progress">
+                <div class="progress-bar bg-success" style="width: 95%">
+                  95%
+                </div>
+              </div>
+            </div>
+            <div class="skill">
+              <p>⚡ Experience with React and JavaScript</p>
+              <div class="progress">
+                <div class="progress-bar bg-info" style="width: 85%">85%</div>
+              </div>
+            </div>
+            <div class="skill">
+              <p>📐 Build fully responsive pages with Flexbox & Grid</p>
+              <div class="progress">
+                <div class="progress-bar bg-warning" style="width: 90%">
+                  90%
+                </div>
+              </div>
+            </div>
+            <div class="skill">
+              <p>🔗 Work with GIT</p>
+              <div class="progress">
+                <div class="progress-bar bg-danger" style="width: 80%">80%</div>
+              </div>
+            </div>
+            <div class="skill">
+              <p>🎨 Styling sections using Bootstrap</p>
+              <div class="progress">
+                <div class="progress-bar bg-secondary" style="width: 80%">
+                  80%
+                </div>
+              </div>
+            </div>
+            <div class="skill">
+              <p>🛠️ Using SASS</p>
+              <div class="progress">
+                <div class="progress-bar bg-primary" style="width: 75%">
+                  75%
+                </div>
+              </div>
+            </div>
+            <div class="skill">
+              <p>⚡ Implement projects with React when needed</p>
+              <div class="progress">
+                <div class="progress-bar bg-info" style="width: 80%">80%</div>
+              </div>
+            </div>
+            <div class="skill">
+              <p>🎨 Familiar with Figma</p>
+              <div class="progress">
+                <div class="progress-bar bg-warning" style="width: 70%">
+                  70%
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row align-items-start g-1">
+          <div class="col-8 text-center fade-in m-auto mt-5">
+            <h2 class="english-title title">Languages</h2>
+            <div class="skill">
+              <p>English</p>
+              <div class="progress">
+                <div class="progress-bar bg-info" style="width: 60%">60%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <!-- Projects Section -->
+    <section id="projects" class="bg-dark text-light">
+      <div class="container">
+        <h2 class="fw-bold text-center mb-5 text-warning title">
+          Projects | <span class="fa-proj-title">پروژه‌ها</span>
+        </h2>
+        <div class="row g-3">
+          <!-- Project Item -->
+          <div class="col-md-6 col-lg-3 fade-in">
+            <div
+              class="card .card-border h-100 bg-secondary text-light shadow-lg"
+            >
+              <img
+                src="./imgs/photo_2025-09-07_17-59-21.jpg"
+                class="card-img-top"
+                alt="Project 0"
+              />
+              <div class="card-body bg-dark">
+                <h5 class="card-title text-warning name-highlight">
+                  React IP Info Project
+                </h5>
+                <p class="card-text fs-6">
+                  Developed a React app that fetches and displays real-time user
+                  information (IP, location, ISP, and country flag) from an
+                  external API.
+                </p>
+
+                <div>
+                  <p class="mb-1 text-info">
+                    <strong class="text-warning">Tech:</strong> 
+                    React
+                  </p>
+                  <a
+                    href="https://github.com/fdi75/AutoGallery"
+                    target="_blank"
+                    class="btn btn-info btn-sm px-4"
+                    >Code</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 fade-in">
+            <div
+              class="card .card-border h-100 bg-secondary text-light shadow-lg"
+            >
+              <img
+                src="./imgs/photo_2025-09-05_14-09-07.jpg"
+                class="card-img-top"
+                alt="Project 1"
+              />
+              <div class="card-body bg-dark">
+                <h5 class="card-title text-warning name-highlight">
+                  Auto Gallery
+                </h5>
+                <p class="card-text fs-6">
+                  A responsive car showroom website built with Bootstrap,
+                  showcasing various vehicles, their features, and prices with a
+                  modern and user-friendly design
+                </p>
+
+                <div>
+                  <p class="mb-1 text-info">
+                    <strong class="text-warning">Tech:</strong> Html, Css,
+                    Bootstrap
+                  </p>
+                  <a
+                    href="https://fdi75.github.io/AutoGallery/"
+                    target="_blank"
+                    class="btn btn-warning btn-sm"
+                    >Live Demo</a
+                  >
+                  <a
+                    href="https://github.com/fdi75/AutoGallery"
+                    target="_blank"
+                    class="btn btn-info btn-sm"
+                    >Code</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Item -->
+          <div class="col-md-6 col-lg-3 fade-in">
+            <div
+              class="card .card-border h-100 bg-secondary text-light shadow-lg"
+            >
+              <img
+                src="./imgs/photo_2025-09-05_14-12-09.jpg"
+                class="card-img-top"
+                alt="Project 2"
+              />
+              <div class="card-body bg-dark">
+                <h5 class="card-title text-warning name-highlight">
+                  Cryptocurrency News
+                </h5>
+                <p class="card-text">
+                  Fully responsive cryptocurrency news site - Grid layout
+                </p>
+
+                <div>
+                  <p class="mb-1 text-info">
+                    <strong class="text-warning">Tech:</strong> HTML, CSS, JS, Bootstrap
+                  </p>
+                  <a
+                    href="https://fdi75.github.io/BitCoin-site/"
+                    target="_blank"
+                    class="btn btn-warning btn-sm"
+                    >Live Demo</a
+                  >
+                  <a
+                    href="https://github.com/fdi75/BitCoin-site"
+                    target="_blank"
+                    class="btn btn-info btn-sm"
+                    >Code</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Item -->
+          <div class="col-md-6 col-lg-3 fade-in">
+            <div
+              class="card .card-border h-100 bg-secondary text-light shadow-lg"
+            >
+              <img
+                src="./imgs/photo_2025-09-05_14-12-14.jpg"
+                class="card-img-top"
+                alt="Project 3"
+              />
+              <div class="card-body bg-dark">
+                <h5 class="card-title name-highlight text-warning">Products</h5>
+                <p class="card-text">
+                  A web app that fetches and displays product data from a fake
+                  server using Fetch API, allowing users to view product details
+                  dynamically."
+                </p>
+
+                <div>
+                  <p class="mb-1 text-info">
+                    <strong class="text-warning">Tech:</strong> JavaScript, Bootstrap
+                  </p>
+                  <a
+                    href="https://fdi75.github.io/Products/"
+                    target="_blank"
+                    class="btn btn-warning btn-sm"
+                    >Live Demo</a
+                  >
+                  <a
+                    href="https://github.com/fdi75/Products"
+                    target="_blank"
+                    class="btn btn-info btn-sm"
+                    >Code</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Item -->
+          <div class="col-md-6 col-lg-3 fade-in">
+            <div
+              class="card .card-border h-100 bg-secondary text-light shadow-lg"
+            >
+              <img
+                src="./imgs/photo_2025-09-05_14-12-18.jpg"
+                class="card-img-top"
+                alt="Project 4"
+              />
+              <div class="card-body bg-dark">
+                <h5 class="card-title name-highlight text-warning">
+                  Payment Form
+                </h5>
+                <p class="card-text">
+                  A mini payment form project with validation, allowing users to
+                  securely enter and submit payment information.
+                </p>
+
+                <div>
+                  <p class="mb-1 text-info">
+                    <strong class="text-warning">Tech:</strong> JavaScript Bootstrap
+                  </p>
+                  <a
+                    href="https://fdi75.github.io/PaymentForm/"
+                    target="_blank"
+                    class="btn btn-warning btn-sm"
+                    >Live Demo</a
+                  >
+                  <a
+                    href="https://github.com/fdi75/PaymentForm"
+                    target="_blank"
+                    class="btn btn-info btn-sm"
+                    >Code</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Item -->
+          <div class="col-md-6 col-lg-3 fade-in">
+            <div
+              class="card .card-border h-100 bg-secondary text-light shadow-lg"
+            >
+              <img
+                src="./imgs/photo_2025-09-05_14-12-23.jpg"
+                class="card-img-top"
+                alt="Project 5"
+              />
+              <div class="card-body bg-dark">
+                <h5 class="card-title name-highlight text-warning">
+                  Blog Post
+                </h5>
+                <p class="card-text">
+                  A mini React blog fetching posts from JSON Server with sidebar
+                  titles and detailed view on click.
+                </p>
+                <div>
+                  <p class="mb-1 text-info">
+                    <strong class="text-warning">Tech:</strong> React, Css
+                  </p>
+
+                  <a
+                    href="https://fdi75.github.io/BlogPost-react/"
+                    target="_blank"
+                    class="btn btn-warning btn-sm"
+                    >Live Demo</a
+                  >
+                  <a
+                    href="https://github.com/fdi75/BlogPost-react"
+                    target="_blank"
+                    class="btn btn-info btn-sm"
+                    >Code</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Item -->
+          <div class="col-md-6 col-lg-3 fade-in">
+            <div
+              class="card .card-border h-100 bg-secondary text-light shadow-lg"
+            >
+              <img
+                src="./imgs/photo_2025-09-05_14-12-28.jpg"
+                class="card-img-top"
+                alt="Project 6"
+              />
+              <div class="card-body bg-dark">
+                <h5 class="card-title name-highlight text-warning">
+                  Dollar calculator
+                </h5>
+                <p class="card-text">
+                  A mini project for converting currency between Iranian Rial
+                  and US Dollar
+                </p>
+
+                <div>
+                  <p class="mb-1 text-info">
+                    <strong class="text-warning">Tech:</strong> Html, Css, JavaScript, TypeScript
+                  </p>
+                  <a
+                    href="https://github.com/fdi75/RiraTask"
+                    target="_blank"
+                    class="btn btn-info btn-sm px-4"
+                    >Code</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Item -->
+          <div class="col-md-6 col-lg-3 fade-in">
+            <div
+              class="card .card-border h-100 bg-secondary text-light shadow-lg"
+            >
+              <img
+                src="./imgs/photo_2025-09-05_14-12-35.jpg"
+                class="card-img-top"
+                alt="Project 7"
+              />
+              <div class="card-body bg-dark">
+                <h5 class="card-title name-highlight text-warning">Sidebar</h5>
+                <p class="card-text">
+                  An interactive sidebar with dark mode toggle, implemented
+                  using vanilla JavaScript for a modern UI experience.
+                </p>
+
+                <div>
+                  <p class="mb-1 text-info">
+                    <strong class="text-warning">Tech:</strong> React, Chart.js, Bootstrap
+                  </p>
+                  <a
+                    href="https://fdi75.github.io/Sidebar/"
+                    target="_blank"
+                    class="btn btn-warning btn-sm"
+                    >Live Demo</a
+                  >
+                  <a
+                    href="https://github.com/fdi75/Sidebar"
+                    target="_blank"
+                    class="btn btn-info btn-sm"
+                    >Code</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section py-5">
+      <div class="shine"></div>
+
+      <div class="container d-flex justify-content-center">
+        <div class="contact-card text-center p-5 shadow-lg">
+          <h2 class="mb-4 fw-bold text-warning contact-title">Let’s Connect</h2>
+          <p class="text-light mb-4 contact-text">
+            I’d love to hear from you!<br />
+            Whether it’s a project, job opportunity, or just a friendly hello 👋
+          </p>
+          <div class="about-contacts en-text my-4 text-center pe-4 w-100">
+            📍 Tehran
+          </div>
+
+          <div class="contact-icons d-flex justify-content-center gap-4">
+            <a href="mailto:daghlanifa@gmail.com" class="contact-icon email"
+              ><i class="bi bi-envelope-fill"></i
+            ></a>
+            <a
+              href="https://github.com/fdi75"
+              target="_blank"
+              class="contact-icon github"
+              ><i class="bi bi-github"></i
+            ></a>
+            <a
+              href="https://linkedin.com/in/username"
+              target="_blank"
+              class="contact-icon linkedin"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+          </div>
+          <a
+            href="tel:+989339497617"
+            target="_blank"
+            class="contact-icon telephone"
+            ><i class="bi bi-telephone-fill"> +989339497617</i></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // -------------------- Welcome typing animation --------------------
+      const text = "Hi, I'm Fateme Daghlani";
+      let i = 0;
+      function typingEffect() {
+        if (i < text.length) {
+          document.getElementById("welcome-text").innerHTML += text.charAt(i);
+          i++;
+          setTimeout(typingEffect, 100);
+        } else {
+          document.getElementById("welcome-text").style.borderRight = "none";
+        }
+      }
+      typingEffect();
+      // -------------------------------------------------------------------
+
+      document.addEventListener("DOMContentLoaded", () => {
+        // -------------------- Fade-in animation --------------------
+        const fadeElements = document.querySelectorAll(".fade-in");
+        const fadeObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) entry.target.classList.add("visible");
+            });
+          },
+          { threshold: 0.2 }
+        );
+        fadeElements.forEach((el) => fadeObserver.observe(el));
+        // ------------------------------------------------------------
+
+        // -------------------- Dot navigation --------------------
+        const sections = document.querySelectorAll("section");
+        const dots = document.querySelectorAll(".dot-nav a");
+
+        const dotObserver = new IntersectionObserver(
+          (entries) => {
+            let visibleSection = null;
+            let maxRatio = 0;
+
+            entries.forEach((entry) => {
+              if (entry.intersectionRatio > maxRatio) {
+                maxRatio = entry.intersectionRatio;
+                visibleSection = entry.target.id;
+              }
+            });
+
+            if (visibleSection) {
+              dots.forEach((dot) => dot.classList.remove("active"));
+              const activeDot = document.querySelector(
+                `.dot-nav a[href="#${visibleSection}"]`
+              );
+              if (activeDot) activeDot.classList.add("active");
+            }
+          },
+          { threshold: Array.from({ length: 101 }, (_, i) => i / 100) } // حساسیت بالا
+        );
+
+        sections.forEach((section) => dotObserver.observe(section));
+        // ------------------------------------------------------------
+
+        const shine = document.querySelector(".shine");
+
+        document.addEventListener("mousemove", (e) => {
+          const x = (e.clientX / window.innerWidth) * 100;
+          const y = (e.clientY / window.innerHeight) * 100;
+
+          // تغییر موقعیت مرکز radial-gradient بر اساس موس
+          shine.style.background = `radial-gradient(circle at ${x}% ${y}%, rgba(255,255,255,0.2) 0%, transparent 60%)`;
+        });
+
+        // ---------------------------hobbies slider-------------------------------
+        const slides = document.querySelectorAll(".slide");
+        const next = document.querySelector(".next");
+        const prev = document.querySelector(".prev");
+
+        let index = 0;
+
+        function showSlide(n) {
+          slides.forEach((slide, i) => {
+            slide.classList.remove("active");
+            if (i === n) slide.classList.add("active");
+          });
+          document.querySelector(".slider").style.transform = `translateX(-${
+            n * 100
+          }%)`;
+        }
+
+        next.addEventListener("click", () => {
+          index = (index + 1) % slides.length;
+          showSlide(index);
+        });
+
+        prev.addEventListener("click", () => {
+          index = (index - 1 + slides.length) % slides.length;
+          showSlide(index);
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,677 @@
+@font-face {
+  font-family: "Barlow";
+  src: url("../font/Barlow-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Afra";
+  src: url("../font/Afra\ Light.ttf") format("truetype");
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  font-family: "Arial", sans-serif;
+}
+
+section {
+  min-height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  font-family: "Barlow";
+}
+
+/* ------------------ Welcome Animation ------------------ */
+#welcome {
+  background: linear-gradient(270deg, #ff6a00, #ee0979, #260573, #2193b0);
+  background-size: 600% 600%;
+  animation: gradientShift 15s ease infinite;
+  color: white;
+  flex-direction: column;
+}
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+#welcome-text {
+  font-size: 3.5rem;
+  font-weight: bold;
+  font-family: "Barlow";
+  border-right: 3px solid rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+  overflow: hidden;
+}
+.welcome-subtitle {
+  margin-top: 15px;
+  font-family: "Barlow";
+  font-size: 1.5rem;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 2.5s;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* ------------------ About Me ------------------ */
+
+/* ---------- Base ---------- */
+:root {
+  --bg1: #0f2027;
+  --bg2: #203a43;
+  --bg3: #2c5364;
+  --accent1: #fbff00;
+  --accent1: #ff6a00;
+  --accent2: #ee0979;
+  --accent3: #6dd5ed;
+  --glass: rgba(255, 255, 255, 0.06);
+}
+.about-section {
+  background: linear-gradient(135deg, var(--bg1), var(--bg2), var(--bg3));
+  overflow: hidden;
+}
+
+/* ---------- Fonts ---------- */
+
+.fa-text {
+  font-family: "Afra", sans-serif;
+  line-height: 1.3;
+  font-size: 20px !important;
+  font-weight: 500;
+}
+
+.fa-text strong {
+  font-family: "Afra" !important;
+  font-size: 1.6rem;
+}
+.en-title {
+  margin-bottom: 1.5rem !important;
+}
+.en-text {
+  line-height: 1.6;
+}
+
+/* ---------- Avatar ---------- */
+.about-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(
+      circle at 30% 30%,
+      rgba(255, 200, 0, 0.35),
+      transparent 70%
+    ),
+    linear-gradient(135deg, var(--accent1), var(--accent2), var(--accent3));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 800;
+  font-size: 2.2rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35),
+    inset 0 0 30px rgba(255, 255, 255, 0.15);
+  position: relative;
+  z-index: 2;
+  animation: popIn 0.7s ease-out both;
+}
+@keyframes popIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ---------- Titles ---------- */
+.about-title {
+  position: relative;
+  font-size: clamp(1.6rem, 2.5vw, 2.3rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.fa-title {
+  font-family: "Afra", sans-serif;
+  margin-bottom: 1.1rem;
+}
+.about-title::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent3), var(--accent1));
+  border-radius: 2px;
+  margin-top: 0.6rem;
+}
+
+/* ---------- Body text & lists ---------- */
+
+.fa-about {
+  padding-bottom: 2.05rem;
+}
+
+.about-intro {
+  font-size: 1.05rem;
+  line-height: 2.1rem;
+  opacity: 0.95;
+}
+.about-list li {
+  margin: 0.35rem 0;
+  padding: 0.2rem 0;
+  transition: transform 0.25s ease, color 0.25s ease;
+  font-family: "Afra";
+  font-weight: 400 !important;
+}
+.about-list li:hover {
+  transform: translateX(6px);
+  color: #ffd166;
+}
+.about-list li strong {
+  font-family: "Barlow" !important;
+}
+
+.en-list li {
+  font-family: "Barlow" !important;
+}
+
+.en-list li strong {
+  font-size: 1.3rem;
+}
+
+/* ---------- Name highlight ---------- */
+.name-highlight {
+  color: var(--accent1);
+  font-weight: 800;
+
+  padding: 0 0.15rem;
+  text-shadow: 0 0 18px rgba(255, 106, 0, 0.25);
+}
+.fa-text .name-highlight {
+  font-family: "Afra";
+  font-size: 1.5rem;
+  font-weight: 600 !important;
+}
+
+/* ---------- Glass panel (optional wrapper) ---------- */
+.about-card {
+  background: var(--glass);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+/* ---------- Animated Blob ---------- */
+.about-blob {
+  position: absolute;
+  inset: -120px auto auto -120px;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(
+      circle at 30% 30%,
+      rgba(255, 234, 159, 0.38),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 60% 60%,
+      rgba(109, 213, 237, 0.35),
+      transparent 60%
+    ),
+    radial-gradient(circle at 70% 30%, rgba(238, 9, 121, 0.3), transparent 60%);
+  filter: blur(70px);
+  z-index: 0;
+  animation: spinFloat 6s linear infinite;
+}
+
+@keyframes spinFloat {
+  0% {
+    transform: rotate(0deg) translateY(0);
+  }
+  50% {
+    transform: rotate(180deg) translateY(24px);
+  }
+  100% {
+    transform: rotate(360deg) translateY(0);
+  }
+}
+/* ---------- Reveal on scroll ---------- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: all 0.8s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Responsive tweaks ---------- */
+@media (max-width: 768px) {
+  .about-avatar {
+    width: 120px;
+    height: 120px;
+    font-size: 1.9rem;
+  }
+  .about-title::after {
+    width: 56px;
+  }
+}
+
+/* ------------------hobbies------------------- */
+/* Hobbies Section */
+
+#hobbies {
+  background: linear-gradient(135deg, #6f335e, #7265a9);
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.5rem;
+}
+.hobbies > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hobbie-text {
+  font-family: "Barlow";
+}
+
+.hobbies-title {
+  text-align: center;
+  color: white;
+  font-weight: 600 !important;
+}
+
+.central-img {
+  width: 500px;
+}
+
+.hobbies {
+  position: relative;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+  max-width: 700px;
+  min-height: 80vh;
+  margin: 1rem auto;
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.289);
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgb(255, 255, 255) 75%,
+    #e9c8ff 100%
+  );
+  transition: transform 0.5s ease-in-out;
+}
+
+.hobbies::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgb(255, 255, 255) 75%,
+    #d79bff 100%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 0;
+}
+.hobbies:hover::after {
+  opacity: 1;
+}
+
+.hobbies:hover {
+  transform: scale(1.02);
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgb(255, 255, 255) 75%,
+    #ddaaff 100%
+  );
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  text-align: center;
+  opacity: 0.6;
+  transition: opacity 0.5s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 300px;
+  border-radius: 1rem;
+}
+
+.prev {
+  left: 10px !important;
+}
+
+.controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.controls span {
+  color: #b265ff;
+  padding: 0.5rem 0.85rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.controls span:hover {
+  color: #ff10d3;
+}
+
+/* ------------------ Skills ------------------ */
+.skills-section {
+  background: linear-gradient(135deg, #294732, #000401, #0e5822);
+  position: relative;
+  overflow: hidden;
+  min-height: 120vh !important;
+  justify-content: flex-start;
+}
+
+/* Title */
+.skills-title,
+.english-title {
+  font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+  font-weight: 800;
+  margin-bottom: 2rem;
+  position: relative;
+  color: #fff;
+}
+
+.fa-skill-title {
+  font-family: "Afra" !important;
+}
+
+.fa-skill {
+  font-family: "Afra" !important;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.fa-skill span {
+  font-family: "Barlow";
+}
+
+/* Skill list */
+.skill {
+  margin-bottom: 1.5rem;
+  font-family: "Barlow";
+}
+.skill p {
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+
+/* Progress Bars */
+.progress {
+  height: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+}
+.progress-bar {
+  height: 130%;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  /* justify-content: flex-end; */
+  padding-right: 6px;
+  transition: width 1.2s ease-in-out;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: all 0.8s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Blob */
+.skills-blob {
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(
+      circle at 30% 30%,
+      rgba(255, 200, 0, 0.38),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 70% 70%,
+      rgba(109, 213, 237, 0.35),
+      transparent 60%
+    ),
+    radial-gradient(circle at 70% 30%, rgba(238, 9, 121, 0.3), transparent 60%);
+  filter: blur(60px);
+  z-index: 0;
+  animation: spinFloat 12s linear infinite;
+}
+
+@keyframes spinFloat {
+  0% {
+    transform: rotate(0deg) translateY(0);
+  }
+  50% {
+    transform: rotate(180deg) translateY(12px);
+  }
+  100% {
+    transform: rotate(360deg) translateY(0);
+  }
+}
+/* ------------------ Projects ------------------ */
+#projects {
+  background: linear-gradient(135deg, #1a3549, #020410, #3f2f7e);
+  position: relative;
+  overflow: hidden;
+  min-height: 125vh;
+  padding-top: 0.5rem;
+  justify-content: flex-start !important;
+}
+.fa-proj-title {
+  font-family: "Afra";
+  font-size: 2.5rem;
+}
+.card-border {
+  border: 1px solid #ffb300 !important;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card {
+  transition: all ease 0.3s;
+}
+
+.card:hover {
+  border: 1px solid rgb(255, 255, 255);
+  transform: scale(1.02);
+}
+
+/* ------------------ Contact ------------------ */
+.contact-section {
+  position: relative;
+  height: 100vh;
+  background: #111;
+  overflow: hidden;
+  color: #fff;
+}
+
+.shine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(50, 50, 50, 0.0001) 5%,
+    rgba(40, 40, 40, 0.42) 70%
+  );
+  transition: background 0.1s;
+}
+
+.contact-card {
+  background: linear-gradient(to bottom right, #ea44356d, #2d2d2d, #0a66c26a);
+  border-radius: 20px;
+  position: relative;
+  z-index: 2;
+  backdrop-filter: blur(10px);
+  max-width: 600px;
+  min-height: 300px;
+}
+.contact-icons {
+  margin-bottom: 2rem;
+}
+.telephone {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  max-width: 600px;
+  text-decoration: none !important;
+  padding: 10px 20px;
+  color: #fff;
+  transition: all 0.3s ease;
+  font-family: "Barlow";
+}
+.telephone:hover {
+  background: rgb(255, 255, 255);
+  color: #020410;
+}
+i {
+  font-style: normal !important;
+}
+
+.contact-icons .contact-icon {
+  font-size: 1.8rem;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 15px 22px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.contact-title {
+  font-family: "Barlow";
+}
+.contact-text {
+  font-family: "Barlow";
+}
+
+.contact-icons .contact-icon:hover {
+  transform: scale(1.2);
+  background: #ffc107; /* پیشفرض هاور */
+  color: #111;
+}
+
+.contact-icon.github:hover {
+  background: #222222;
+  color: #fff;
+}
+.contact-icon.linkedin:hover {
+  background: #0a66c2;
+  color: #fff;
+}
+
+.contact-icon.email:hover {
+  background: #ea4335;
+  color: #fff;
+}
+
+/* ------------------------- */
+
+.name {
+  font-size: 1.2vw;
+  color: rgb(101, 255, 255);
+}
+
+.dot-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 999;
+}
+
+.dot-nav a {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #aaa;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.dot-nav a:hover {
+  background-color: #555;
+  transform: scale(1.2);
+}
+
+.dot-nav a.active {
+  background-color: #000000;
+  border: 1px solid #a9fff6;
+  transform: scale(1.2);
+}
+
+.dot-nav a {
+  opacity: 0.6;
+}
+.dot-nav a.active {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .dot-nav {
+    display: none;
+  }
+}
