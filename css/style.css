@@ -548,8 +548,7 @@ section {
   background: linear-gradient(135deg, #1a3549, #020410, #3f2f7e);
   position: relative;
   overflow: hidden;
-  min-height: 125vh;
-  padding-top: 0.5rem;
+  padding-top: 0.2rem;
   justify-content: flex-start !important;
 }
 .fa-proj-title {
@@ -557,7 +556,7 @@ section {
   font-size: 2.5rem;
 }
 .card-border {
-  border: 1px solid #ffb300 !important;
+  border: 1px solid #000000b2 !important;
 }
 
 .card-body {
@@ -571,7 +570,7 @@ section {
 }
 
 .card:hover {
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid rgba(255, 255, 255, 0.511) !important;
   transform: scale(1.02);
 }
 
