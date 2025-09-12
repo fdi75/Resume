@@ -16,6 +16,16 @@ body {
   font-family: "Arial", sans-serif;
 }
 
+body {
+    scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
 section {
   min-height: 100vh;
   scroll-snap-align: start;
