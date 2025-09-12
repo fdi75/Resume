@@ -52,7 +52,7 @@
               if (activeDot) activeDot.classList.add("active");
             }
           },
-          { threshold: Array.from({ length: 101 }, (_, i) => i / 100) } // حساسیت بالا
+          { threshold: Array.from({ length: 101 }, (_, i) => i / 100) }
         );
 
         sections.forEach((section) => dotObserver.observe(section));

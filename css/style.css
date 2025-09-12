@@ -672,6 +672,8 @@ i {
   color: rgb(101, 255, 255);
 }
 
+/* nav-dots */
+
 .dot-nav {
   display: flex;
   flex-direction: column;
@@ -708,7 +710,13 @@ i {
 }
 
 @media (max-width: 768px) {
+
   .dot-nav {
-    display: none;
+    gap: 8px;
+    margin-right: 6px !important;
+  }
+  .dot-nav a{
+    width: 8px;
+    height: 8px;
   }
 }
